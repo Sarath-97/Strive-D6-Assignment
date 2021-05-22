@@ -51,9 +51,13 @@ let me = {
    Programmatically add to the object me an array called "skills", containing the programming languages you know right now.
 */
 
+  me.skills = ["HTML","CSS", "Java", "C"]
+
 /* Ex.G 
    Programmatically remove the last skill from the "skills" array inside the "me" object.
 */
+
+  me.skills.pop()
 
 // JS Functions
 /* Ex.1

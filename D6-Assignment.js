@@ -63,15 +63,36 @@ let me = {
 /* Ex.1
     Write a function called "dice"; it should randomize an integer number between 1 and 6.
 */
-
+function dice(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min)
+}
 /* Ex.2 
-    Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
+  Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
+
+function whoIsBigger(num1, num2) {
+
+  if(num1 > num2){
+      return num1
+  }
+  else{
+      return num2
+  }
+}
 
 /* Ex.3
-    Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
-    Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
+  Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
+  Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
+
+function splitMe(split) {
+
+  return split.split(" ")
+}
+
+console.log(splitMe("These exercises are stressing me :("))
 
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.

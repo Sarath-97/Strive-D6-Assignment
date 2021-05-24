@@ -103,6 +103,13 @@ console.log(splitMe("These exercises are stressing me :("))
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
 
+function onlyLetters(string){
+    
+  result = string.replace(/[0-9]/g, '')
+ return result
+}
+console.log(onlyLetters("i have 5 dogs"))
+
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
@@ -110,6 +117,14 @@ console.log(splitMe("These exercises are stressing me :("))
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
+
+function whatDayIsIt(d, dayName){
+  daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+  d = new Date()
+  dayName = daysOfWeek[d.getDay()]
+
+  return dayName
+}
 
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.

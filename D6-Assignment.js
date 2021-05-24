@@ -144,6 +144,12 @@ function whatDayIsIt(d, dayName){
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
+function isTodayMyBirthday(birthday) {
+  var today = new Date();
+return birthday.getDate() === today.getDate() && birthday.getMonth() === today.getMonth() && birthday.getFullYear() === today.getFullYear();
+}
+
+console.log("Is today my birthday ? ", isTodayMyBirthday(new Date("24/05/2021")))
 
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
@@ -156,9 +162,21 @@ function whatDayIsIt(d, dayName){
     Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
 */
 
+function olderMovie(){
+  for (i = 0; i < movies.length;i++){
+      if(movies[i].Year === "1963"){
+          console.log(movies[i].Title + " " + movies[i].Year)
+      }
+  }
+   }
+
 /* Ex.13
     Write a function called "countMovies" which returns the number of movies contained in the array provided at the end of this file.
 */
+
+function countMovies(){
+  console.log(movies.length)
+}
 
 /* Ex.14
     Write a function called "onlyTheTitles" which creates an array with just the titles of the movies provided in the array at the end of the file.
@@ -167,6 +185,16 @@ function whatDayIsIt(d, dayName){
 /* Ex.15
    Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
 */
+
+function olderMovie(){
+  for (i = 0; i < movies.length;i++){
+      if(movies[i].Year >= "2001"&& movies[i].Year <= "3000" ){
+           console.log(movies[i].Title + " " + movies[i].Year)
+      }
+  }
+   }
+
+   console.log(olderMovie())
 
 /* Ex.16 
     Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
